@@ -1,0 +1,4 @@
+Install Isc-dhcp-server -> sudo apt install isc-dhcp-server
+Restart DHCPv4 and DHCPv6 -> sudo systemctl restart isc-dhcp-server.service
+Status DHCPv4 and DHCPv6 -> sudo systemctl status isc-dhcp-server.service
+Check leases active -> cat /var/lib/dhcp/dhcpd.leases
