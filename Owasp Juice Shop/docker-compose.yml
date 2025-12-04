@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    container_name: juice-shop
+    restart: unless-stopped
+    networks:
+      - juice_net
+    ports:
+      - "3000:3000"
+    user: "1001:1001"
+
+networks:
+  juice_net:
+    external: true
