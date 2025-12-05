@@ -5,3 +5,4 @@ Este repositório documenta a configuração, manutenção e evolução de um se
 ✅DNS
 ✅Docker
 ✅Owasp Juice Shop
+✅DVWA
