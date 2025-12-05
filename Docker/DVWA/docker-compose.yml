@@ -1,0 +1,36 @@
+services:
+  dvwa:
+    image: vulnerables/web-dvwa
+    container_name: dvwa
+    restart: unless-stopped
+    ports:
+      - "3005:80"
+    environment:
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=dvwa
+      - MYSQL_DATABASE=dvwa
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - dvwa_net
+    depends_on:
+      - dvwa-db
+
+  dvwa-db:
+    image: mariadb:10.5
+    container_name: dvwa-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=dvwa
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=dvwa
+    networks:
+      - dvwa_net
+    volumes:
+      - dvwa_db_data:/var/lib/mysql
+
+networks:
+  dvwa_net:
+
+volumes:
+  dvwa_db_data:
