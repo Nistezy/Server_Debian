@@ -6,3 +6,4 @@ Este repositório documenta a configuração, manutenção e evolução de um se
 ✅Docker
 ✅Owasp Juice Shop
 ✅DVWA
+✅Reverse Proxy 
