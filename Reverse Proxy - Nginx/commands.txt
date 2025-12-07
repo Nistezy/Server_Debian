@@ -1,0 +1,4 @@
+Active site juice-shop -> sudo ln -s /etc/nginx/sites-available/juice.conf /etc/nginx/sites-enabled/
+Active site dvwa -> sudo ln -s /etc/nginx/sites-available/dvwa.conf /etc/nginx/sites-enabled/
+Restart nginx -> sudo nginx -t
+Reolad service nginx -> sudo systemctl reload nginx

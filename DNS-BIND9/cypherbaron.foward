@@ -3,7 +3,7 @@
 ;
 $TTL 1200
 @       IN      SOA     ns1.cypherbaron.local. root.cypherbaron.local. (
-                        2025110201      ; Serial (aumentei)
+                        2025120601      ; Serial
                         86400           ; Refresh
                         1200            ; Retry
                         2419200         ; Expire
@@ -17,3 +17,10 @@ router  IN      CNAME   gateway
 
 pc01    IN      A       192.168.2.50
 host    IN      CNAME   pc01
+juice   IN      A       192.168.2.50
+dvwa    IN      A       192.168.2.50
+
+
+
+
+
